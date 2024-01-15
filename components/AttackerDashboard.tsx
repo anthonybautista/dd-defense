@@ -5,11 +5,10 @@ import {
   useWaitForTransaction, useContractRead,
 } from 'wagmi'
 import {gameAbi} from "../consts/abi";
-import {Button, Menu, MenuItem} from "@mui/material";
+import {Button} from "@mui/material";
 import {useEffect, useState} from "react";
 import MoveButtons from "./MoveButtons";
 import { CountdownCircleTimer } from 'react-countdown-circle-timer'
-import {toFixed} from "i18n-js/typings/helpers/toFixed";
 import {parseEther} from "viem";
 import {ApproveButton} from "./ApproveButton";
 

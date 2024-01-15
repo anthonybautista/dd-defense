@@ -19,8 +19,8 @@ const { chains, publicClient, webSocketPublicClient } = configureChains(
 );
 
 const { connectors } = getDefaultWallets({
-  appName: 'Coq Blocks',
-  projectId: '5b9872f66a27e9b9cac5e22d1fb0bfdb',
+  appName: 'Dik Dik Defense',
+  projectId: 'c3b2748bd98f345f925b8ac5f0ccf40d',
   chains,
 });
 

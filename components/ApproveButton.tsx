@@ -6,7 +6,6 @@ import {
 } from 'wagmi'
 import {erc20Abi} from "../consts/abi";
 import {Button} from "@mui/material";
-import {useEffect} from "react";
 import {parseEther} from "viem";
 
 export function ApproveButton(props) {

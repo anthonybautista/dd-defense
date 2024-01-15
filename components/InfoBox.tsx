@@ -1,4 +1,3 @@
-import {Button} from "@mui/material";
 import * as React from "react";
 import Image from "next/image";
 import {DefenderDashboard} from "./DefenderDashboard";

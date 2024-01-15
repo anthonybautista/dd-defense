@@ -45,11 +45,11 @@ type Stats = {
 }
 
 const Home: NextPage = () => {
-  const chain = 43113;
-  const pepes = '0x4DFeD39d74E9Ca4f9a4fd7dDfD52Eca229a08F5d';
-  const dikdiks = '0x338396A0D2e73108AA93eE1B5D28314a2360bfF8';
-  const coq = '0x5fDA45eb3276b7b9112FBd01Bb2337Ab77f2E218';
-  const game = '0x310Be8D4cD16bfD538bCE36bF424d4de61E09BBf';
+  const chain = 43114;
+  const pepes = '0x40801889321743cD0Dcb6E4C15eaa584b36564DC';
+  const dikdiks = '0x8Fe7EB2b9d26a73Ea8C8234aAcD0de81FcbA50F5';
+  const coq = '0x420FcA0121DC28039145009570975747295f2329';
+  const game = '0xe2046556bb9d2581Ed5B2d7B38009921e4c5627E';
   const mintPrice = 6900000;
   const [mintAmount, setMintAmount] = useState(1);
   const [anchorEl, setAnchorEl] = useState(null);
@@ -203,6 +203,17 @@ const Home: NextPage = () => {
           content="Dik Diks are magical creatures that must defend themselves from agressive coqs."
           name="Dik Dik Defense"
         />
+        <meta property="og:url" content="https://www.dikdikdefense.com/"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="Dik Dik Defense"/>
+        <meta property="og:description" content="Deep in the Hardwood Forest lived a magical creature known as the Dik Dik."/>
+        <meta property="og:image" content="https://cdn.blockviper.com/og/dikdik_og.jpg"/>
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta property="twitter:domain" content="dikdikdefense.com"/>
+        <meta property="twitter:url" content="https://www.dikdikdefense.com/"/>
+        <meta name="twitter:title" content="Dik Dik Defense"/>
+        <meta name="twitter:description" content="Deep in the Hardwood Forest lived a magical creature known as the Dik Dik."/>
+        <meta name="twitter:image" content="https://cdn.blockviper.com/og/dikdik_og.jpg"/>
         <link href="/static/favicon.ico" rel="icon" />
       </Head>
 
@@ -248,7 +259,7 @@ const Home: NextPage = () => {
           Mint a Dik Dik for 6.9 million $COQ, and defend yourself against attackers for a chance to earn $COQ. Read
           more here: &nbsp;
           <a className={styles.fancyLink}
-             href="https://docs.dikdikdefense.com"
+             href="https://docs.dikdiknft.com"
              target="_blank" rel="noopener noreferrer">Game Rules and Info.</a>
         </p>
 
