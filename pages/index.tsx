@@ -572,6 +572,16 @@ const Home: NextPage = () => {
       </main>
 
       <footer className={styles.footer}>
+        <p>
+          Dev:&nbsp;
+          <a className={styles.fancyLink}
+             href="https://x.com/xrpant"
+             target="_blank" rel="noopener noreferrer">@xrpant</a>
+          &nbsp; | Art:&nbsp;
+          <a className={styles.fancyLink}
+             href="https://x.com/0xBrie"
+             target="_blank" rel="noopener noreferrer">@0xBrie</a>
+        </p>
       </footer>
     </div>
   );
