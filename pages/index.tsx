@@ -389,7 +389,8 @@ const Home: NextPage = () => {
                   Attack
                 </Button>
               </ButtonGroup>
-              <p>Current Defenders</p>
+              {/*<p>Current Defenders</p>*/}
+              <h4 style={{color:'#36ff00', fontWeight:'bold'}}>Staking Not Live Yet!</h4>
               <div className={styles.statsDiv}>
                 <Button className={styles.statsImageOne} disabled>
                   <Image
