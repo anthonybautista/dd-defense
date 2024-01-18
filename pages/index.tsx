@@ -17,9 +17,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import {useAccount, useContractEvent, useContractRead,} from 'wagmi'
 import {dikdikAbi, erc20Abi, gameAbi, pepeAbi} from "../consts/abi";
 import {Button, ButtonGroup, Divider, Grid, Menu, MenuItem} from "@mui/material";
-import {parseEther} from "viem";
-import {ApproveMintButton} from "../components/ApproveMintButton";
-import {MintButton} from "../components/MintButton";
 import InfoBox from "../components/InfoBox";
 import BattleResult from "../components/BattleResult";
 
@@ -289,57 +286,12 @@ const Home: NextPage = () => {
               <p>{supply} / 420</p>
               <Divider style={{borderColor:'#CD7123', marginTop:10}}/>
               <Button
-                id="amount-button"
-                aria-controls={open ? 'amount-menu' : undefined}
-                aria-haspopup="true"
-                aria-expanded={open ? 'true' : undefined}
-                onClick={handleClick}
+                disabled
                 variant="outlined"
                 style={{marginBottom: 10, color:'#CD7123', borderColor:'#CD7123', marginTop: 10}}
               >
-                {mintAmount}
+                SOLD OUT
               </Button>
-              <Menu
-                id="amount-menu"
-                anchorEl={anchorEl}
-                open={open}
-                onClose={() => handleAmountClose(1)}
-                MenuListProps={{
-                  'aria-labelledby': 'amount-button',
-                }}
-              >
-                {
-                  mintAmounts.map((a) => (
-                    <MenuItem onClick={() => handleAmountClose(a)} key={a}>{a}</MenuItem>
-                  ))
-                }
-              </Menu>
-              {
-                coqMintApproved < Number(parseEther((mintPrice * mintAmount).toString())) ?
-                  <ApproveMintButton
-                    address={address}
-                    token={coq}
-                    mintPrice={mintPrice}
-                    mintAmount={mintAmount}
-                    spender={dikdiks}
-                    ticker={'$COQ'}
-                    chain={chain}
-                    toast={toast}
-                    coqApproved={coqMintApproved}
-                    refetchApproval={refetchMintApproval}
-                  />
-                :
-                  <MintButton
-                    address={address}
-                    mintAmount={mintAmount}
-                    contract={dikdiks}
-                    chain={chain}
-                    toast={toast}
-                    refetchApproval={refetchMintApproval}
-                    refetchDikDiks={refetchDikDiks}
-                    refetchSupply={refetchSupply}
-                  />
-              }
             </div>
           </div>
 
@@ -389,8 +341,7 @@ const Home: NextPage = () => {
                   Attack
                 </Button>
               </ButtonGroup>
-              {/*<p>Current Defenders</p>*/}
-              <h4 style={{color:'#36ff00', fontWeight:'bold'}}>Staking Not Live Yet!</h4>
+              <p>Current Defenders</p>
               <div className={styles.statsDiv}>
                 <Button className={styles.statsImageOne} disabled>
                   <Image
@@ -573,16 +524,34 @@ const Home: NextPage = () => {
       </main>
 
       <footer className={styles.footer}>
-        <p>
-          Dev:&nbsp;
+        <div>
+          <p>
+            Dev:&nbsp;
+            <a className={styles.fancyLink}
+               href="https://x.com/xrpant"
+               target="_blank" rel="noopener noreferrer">@xrpant</a>
+            &nbsp; | Art:&nbsp;
+            <a className={styles.fancyLink}
+               href="https://x.com/0xBrie"
+               target="_blank" rel="noopener noreferrer">@0xBrie</a>
+            &nbsp; | Project:&nbsp;
+            <a className={styles.fancyLink}
+               href="https://x.com/dikdikNFT"
+               target="_blank" rel="noopener noreferrer">@dikdikNFT</a>
+          </p>
+        </div>
+        <div>
+          <p style={{fontWeight:'bold'}}>
+            This protocol has not been audited. Play at your own risk.<br/>
+            DO NOT stake more than you are willing to lose.
+            DO NOT engage with crypto assets or protocols that are not legal in your jurisdiction.
+          </p>
+        </div>
+        <div>
           <a className={styles.fancyLink}
-             href="https://x.com/xrpant"
-             target="_blank" rel="noopener noreferrer">@xrpant</a>
-          &nbsp; | Art:&nbsp;
-          <a className={styles.fancyLink}
-             href="https://x.com/0xBrie"
-             target="_blank" rel="noopener noreferrer">@0xBrie</a>
-        </p>
+             href="https://docs.dikdiknft.com"
+             target="_blank" rel="noopener noreferrer">Docs</a>
+        </div>
       </footer>
     </div>
   );
